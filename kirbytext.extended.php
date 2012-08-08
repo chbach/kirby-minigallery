@@ -61,7 +61,7 @@ class kirbytextExtended extends kirbytext {
                                         'crop'    => $options['crop'], 
                                         'quality' => $options['quality']
                                      ));
-      if ($fancybox)
+      if ($fancybox == "true")
         $output .= "</a>";
     }
 
