@@ -1,7 +1,7 @@
 kirby-minigallery
 =================
 
-A small kirbytext extension to generate little fancybox galleries with thumbs on the fly.
+A small kirbytext extension to generate little fancybox galleries with thumbnails on the fly.
 
 ## Requirements
 
@@ -37,4 +37,6 @@ If you want to have more than one gallery and don't want them to be connected th
 	(minigallery:01.jpg|02.jpg|03.jpg rel:first)
 	(minigallery:01.jpg|02.jpg|03.jpg rel:second)
 
-The rest of the available options relate to the Thumb plugin.
+To disable the link to the original you can set `fancybox:false`.
+
+The rest of the available options relate to the Thumb plugin. So it is possible to set the maximum width and height like this: `width:240` and `height:320`.
