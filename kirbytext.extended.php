@@ -38,7 +38,7 @@ class kirbytextExtended extends kirbytext {
     $titlesArr = explode("|", $titles);
 
     // html output 
-    $output  = "<section class=\"minigallery\">";
+    $output  = "<span class=\"minigallery\">";
 
     foreach ($filesArr as $key => $img) {
       $currentImage =  $page->images()->find($img);
@@ -65,7 +65,7 @@ class kirbytextExtended extends kirbytext {
         $output .= "</a>";
     }
 
-    $output .= "</section>";
+    $output .= "</span>";
 
     return $output;
   }
