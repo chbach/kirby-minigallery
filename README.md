@@ -39,4 +39,6 @@ If you want to have more than one gallery and don't want them to be connected th
 
 To disable the link to the original you can set `fancybox:false`.
 
+For a custom CSS class use `class:classname`.
+
 The rest of the available options relate to the Thumb plugin. So it is possible to set the maximum width and height like this: `width:240` and `height:320`.

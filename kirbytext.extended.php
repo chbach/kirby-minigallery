@@ -6,7 +6,7 @@ class kirbytextExtended extends kirbytext {
   
     parent::__construct($text, $markdown);
     $this->addTags('minigallery');
-    $this->addAttributes('crop', 'quality', 'titles', 'rel', 'fancybox');
+    $this->addAttributes('crop', 'quality', 'titles', 'rel', 'fancybox', 'class');
   
   }
 
@@ -22,7 +22,8 @@ class kirbytextExtended extends kirbytext {
       'quality'  => 100,
       'rel'      => "gallery",  // if you want to create several different galleries on one page, you must specify a different relation
       'titles'   => "",         // image titles seperated with | 
-      'fancybox' => "true"      // should there be a link to the original?
+      'fancybox' => "true",      // should there be a link to the original?
+      'class'    => ""          //custom css class for this gallery
     );
 
     global $site;
@@ -38,7 +39,9 @@ class kirbytextExtended extends kirbytext {
     $titlesArr = explode("|", $titles);
 
     // html output 
-    $output  = "<span class=\"minigallery\">";
+    $output  = "<span class=\"minigallery";
+    $output .= ($options['class']) ? " ".$options['class'] : "";
+    $output .= "\">";
 
     foreach ($filesArr as $key => $img) {
       $currentImage =  $page->images()->find($img);
