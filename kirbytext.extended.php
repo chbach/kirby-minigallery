@@ -39,7 +39,9 @@ class kirbytextExtended extends kirbytext {
     $titlesArr = explode("|", $titles);
 
     // html output 
-    $output  = "<span class=\"minigallery ".$options['class']."\">";
+    $output  = "<span class=\"minigallery";
+    $output .= ($options['class']) ? " ".$options['class'] : "";
+    $output .= "\">";
 
     foreach ($filesArr as $key => $img) {
       $currentImage =  $page->images()->find($img);
